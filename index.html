@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap-Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Css-->
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="js/main.js"></script>
+
     <title>Encriptador</title>
 </head>
+
 <body>
-    
+
+    <div class="contenedor">
+
+        <div class="icono">
+            <img src="./img/loco.png" alt="logo-alura" title="Alura">
+        </div>
+
+        <div class="contenedor-md">
+            <div class="cuadrante2">
+
+                <div>
+                    <input type="text" id="input-texto" placeholder="Ingrese el texto aquí">
+                </div>
+
+            </div>
+
+            <div class="cuadrante3">
+
+                <div class="buttons">
+
+                    <button type="button" id="btn-encriptar" onclick="encriptar()">
+                        Encriptar
+                    </button>
+
+                    <button type="button" id="btn-desencriptar" onclick="dencriptar()">
+                        Desencriptar
+                    </button>
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cuadrante1">
+
+            <div class="mostrartxt">
+
+                <p id="mostrartxt"></p>
+
+                <div class="muneco">
+                    <img src="./img/Muñeco.png" id="muñeco" alt="muñeco">
+                </div>
+
+                <div class="txtc1" id="txtc1">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <button type="button" id="btn-copiar" onclick="copiar()">¡copiar!</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
