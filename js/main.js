@@ -3,6 +3,10 @@ La letra "i" es convertida para "imes"
 La letra "a" es convertida para "ai"
 La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat"*/
+var btnEncriptar = document.getElementById("btn-encriptar");
+var btnDesenciptar = document.getElementById("btn-desencriptar");
+var muñeco = document.getElementById("muñeco");
+var btnCopiar= document.getElementById("btn-copiar");
 
 function encriptar() {
   var texto = document.getElementById("input-texto").value.toLowerCase();
@@ -15,7 +19,7 @@ function encriptar() {
   var txtcifrado = txtcifrado.replace(/o/igm, "ober");
   var txtcifrado = txtcifrado.replace(/u/igm, "ufat");
 
-  document.getElementById("muñeco").style.display= "none";
+  muñeco.style.display= "none";
   document.getElementById("txtc1").style.display= "none";
   document.getElementById("mostrartxt").innerHTML = txtcifrado;
   document.getElementById("btn-copiar").style.display = "show";
@@ -36,9 +40,5 @@ function desencriptar() {
     document.getElementById("btn-copiar").style.display = "show";
     document.getElementById("btn-copiar").style.display = "inherit";
   }
-
-function copiar(){
-    var contenido= document.querySelector("#mostrartxt");
-    contenido.execCommand("copy");
-    alert("se copio")
-}
+btnEncriptar.onclick = encriptar;
+btnDesenciptar.onclick = desencriptar;
